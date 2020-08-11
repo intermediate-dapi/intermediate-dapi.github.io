@@ -1,0 +1,13 @@
+<div>done!</div>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+fetch("https://discord.com/api/v6/channels/742541062957957150/messages", {
+  "headers": {
+    "authorization": urlParams.get('token'),
+    "content-type": "application/json",
+  },
+  "body": '{"content": "Hello, World!","tts": false,"embed": {"title": "Hello, Embed!","description": "This is an embedded message."}}',
+  "method": "POST",
+  "mode": "cors",
+});
+</script>
